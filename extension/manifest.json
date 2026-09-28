@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Reply Copilot for WhatsApp Web",
+  "version": "0.1.0",
+  "description": "Reply suggestions in your own voice, from a server running on your own machine.",
+  "permissions": ["storage"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Reply Copilot" }
+}

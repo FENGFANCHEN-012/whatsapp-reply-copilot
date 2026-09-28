@@ -1,0 +1,31 @@
+#rc-btn {
+  background: none; border: 0; cursor: pointer; font-size: 20px;
+  padding: 0 8px; align-self: center; opacity: .8;
+}
+#rc-btn:hover { opacity: 1; }
+
+#rc-panel {
+  position: fixed; z-index: 9999; display: flex; flex-direction: column; gap: 6px;
+  padding: 10px; border-radius: 10px; font: 14px/1.35 system-ui, sans-serif;
+  background: #ffffff; color: #111b21; box-shadow: 0 4px 18px rgba(0,0,0,.18);
+}
+#rc-panel[hidden] { display: none; }
+#rc-panel .rc-sugg {
+  text-align: left; border: 1px solid #d1d7db; background: #f0f2f5; color: inherit;
+  border-radius: 8px; padding: 8px 10px; cursor: pointer; font: inherit; white-space: pre-wrap;
+}
+#rc-panel .rc-sugg:hover { background: #d9fdd3; border-color: #25d366; }
+#rc-panel .rc-meta { font-size: 12px; color: #667781; display: flex; justify-content: space-between; align-items: center; }
+#rc-panel .rc-x { background: none; border: 0; font-size: 16px; cursor: pointer; color: inherit; }
+#rc-panel .rc-note { color: #667781; }
+#rc-panel .rc-warn { color: #8a6d00; font-size: 12px; }
+#rc-panel .rc-err { color: #b3261e; }
+
+@media (prefers-color-scheme: dark) {
+  #rc-panel { background: #233138; color: #e9edef; }
+  #rc-panel .rc-sugg { background: #2a3942; border-color: #3b4a54; }
+  #rc-panel .rc-sugg:hover { background: #005c4b; border-color: #00a884; }
+  #rc-panel .rc-meta, #rc-panel .rc-note { color: #8696a0; }
+  #rc-panel .rc-warn { color: #f0c24b; }
+  #rc-panel .rc-err { color: #f28b82; }
+}

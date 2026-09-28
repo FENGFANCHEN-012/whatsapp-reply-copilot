@@ -1,0 +1,15 @@
+# Your chats and your keys never leave your machine.
+.env
+data/
+*.crypt12
+*.crypt14
+*.crypt15
+*.db
+*.key
+encrypted_backup*
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
